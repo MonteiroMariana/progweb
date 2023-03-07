@@ -5,27 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
-    <style>
+    
 
-        body{
-            background-color: #d6cbd3;
-        }
-    </style>
+    <link rel="stylesheet"href="style.css" >
 </head>
 <body>
+    <div class="container">
     <h1> Calculadora Básica</h1>
     <form>
         <!--comentario-->
 
 
-         <input type= "text" id="n1">
-        +
-        <input type="text" id="n2">
+         Valor 1<input type= "text" id="n1"><br><br>
+        Valor 2<input type="text" id="n2"><br>
+        <br>
+
         <button class="Somar" type="button" onclick="somar()">somar</button>
-        <input type="text" id="resp" readonly>
+        <button class="subtrair" type="button" onclick="subtrair()">subtrair</button>
+        <button class="dividir" type="button" onclick="dividir()">dividir</button>
+        <button class="multiplicar" type="button" onclick="multiplicar()">multiplicar</button>
+        <button class="porcentagem" type="button" onclick="porcentagem()">porcentagem</button>
+        <br><br>
+       Resposta <input type="text" id="resp" readonly>
+
 
 
     </form>
+</div>
 <script>
     function somar(){
         var n1, n2, resp;
@@ -34,6 +40,51 @@
         n2 = parseFloat(document.getElementById("n2").value);
 
         resp = n1 + n2;
+
+        document.getElementById("resp").value = resp;
+    }
+
+    function subtrair(){
+        var n1, n2, resp;
+
+        n1 = parseFloat(document.getElementById("n1").value);
+        n2 = parseFloat(document.getElementById("n2").value);
+
+        resp = n1 - n2;
+
+        document.getElementById("resp").value = resp;
+    }
+
+    function dividir(){
+        var n1, n2, resp;
+
+        n1 = parseFloat(document.getElementById("n1").value);
+        n2 = parseFloat(document.getElementById("n2").value);
+
+        resp = n1 / n2;
+
+        document.getElementById("resp").value = resp;
+    }
+
+    function multiplicar(){
+        var n1, n2, resp;
+
+        n1 = parseFloat(document.getElementById("n1").value);
+        n2 = parseFloat(document.getElementById("n2").value);
+
+        resp = n1 * n2;
+
+        document.getElementById("resp").value = resp;
+    }
+
+    function porcentagem(){
+        var n1, n2, resp;
+
+        n1 = parseFloat(document.getElementById("n1").value);
+        n2 = parseFloat(document.getElementById("n2").value);
+
+        resp = n1=n1/100;
+       
 
         document.getElementById("resp").value = resp;
     }

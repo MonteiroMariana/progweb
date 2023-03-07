@@ -1,0 +1,14 @@
+
+body{
+ 
+    
+            background-color: #FFE4E1;
+            display:  flex;
+            justify-content: center;
+            text-align:center;
+            text-transform: capitalize;
+            padding: 2em;
+            font-family: "New Century Schoolbook", cursive; 
+            
+        
+}
